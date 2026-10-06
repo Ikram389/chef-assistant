@@ -1,0 +1,27 @@
+[project]
+name = "my-personalchef-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "groq>=0.37.1",
+    "langchain>=1.4.3",
+    "langchain-groq>=1.1.3",
+    "langchain-tavily>=0.2.18",
+    "langgraph>=1.2.12",
+    "openai>=3.22.1",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+my-personalchef-project = "my_personalchef_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "wedding-planner",
+]
